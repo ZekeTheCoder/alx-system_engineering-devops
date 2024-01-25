@@ -23,3 +23,13 @@
 - Where only the part of the name after the first dash is displayed
 10. File: 9-to_file_or_not_to_file - Write a Bash script that gives you information about the school file.
 11. File: 10-fizzbuzz - Write a Bash script that displays numbers from 1 to 100.
+
+### Advanced Tasks(4)
+1. File: 100-read_and_cut - Write a Bash script that displays the content of the file /etc/passwd.
+Your script should only display:
+* username
+* user id
+* Home directory path for the user
+2. File: 101-tell_the_story_of_passwd - Write a Bash script that displays the content of the file /etc/passwd, using the while loop + IFS.
+3. File: 102-lets_parse_apache_logs - Write a Bash script that displays the visitor IP along with the HTTP status code from the Apache log file.
+4. File: 103-dig_the-data -  write a Bash script that groups visitors by IP and HTTP status code, and displays this data.
