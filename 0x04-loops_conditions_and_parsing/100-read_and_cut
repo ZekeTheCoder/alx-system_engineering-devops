@@ -5,13 +5,9 @@
 #    *user id
 #    *Home directory path for the user
 
-while read -r passwd; do
+while IFS=':' read -r username _ uid _ _ homedir _; do
+  echo "$username:$uid:$homedir"
   # Display username, user id, and home directory
-  echo "$passwd" | cut -d ':' -f1,3,6
-
-  username=$(echo "$passwd" | cut -d ':' -f1)
-  uid=$(echo "$passwd" | cut -d ':' -f3)
-  homedir=$(echo "$passwd" | cut -d ':' -f6)
   echo "Username: $username"
   echo "User ID: $uid"
   echo "Home Directory: $homedir"
@@ -19,7 +15,8 @@ while read -r passwd; do
 done < "/etc/passwd"
 
 
-# specific order:
+
+# specific order: username password uid gid info homedir shell
 # 1. Username
 # 2. Password (usually an 'x' indicating that the password is stored in the /etc/shadow file)
 # 3. User ID (UID)
