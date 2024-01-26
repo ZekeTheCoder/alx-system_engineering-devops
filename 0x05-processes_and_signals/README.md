@@ -14,3 +14,19 @@
 - I am invincible!!! when receiving a SIGTERM signal
 9. File: 8-beheaded_process - Write a Bash script that kills the process 7-highlander.
 
+### Advanced(3)
+1. File: 100-process_and_pid_file - Write a Bash script that:
+- Creates the file /var/run/myscript.pid containing its PID
+- Displays To infinity and beyond indefinitely
+- Displays I hate the kill command when receiving a SIGTERM signal
+- Displays Y U no love me?! when receiving a SIGINT signal
+- Deletes the file /var/run/myscript.pid and terminates itself when receiving a SIGQUIT or SIGTERM signal
+
+2. File: 101-manage_my_process, manage_my_process - 
+* Write a manage_my_process Bash script that:
+- Indefinitely writes I am alive! to the file /tmp/my_process
+- In between every I am alive! message, the program should pause for 2 seconds
+
+* Write Bash (init) script 101-manage_my_process that manages manage_my_process. (both files need to be pushed to git)
+
+3. File: 102-zombie.c - Write a C program that creates 5 zombie processes.
