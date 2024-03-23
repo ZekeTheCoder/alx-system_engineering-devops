@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# This script displays the content of the file /etc/passwd using the while loop.
+# This script only displays:
+#    *username
+#    *user id
+#    *Home directory path for the user
+
+while IFS=':' read -r username _ uid _ _ homedir _; do
+  echo "$username:$uid:$homedir"
+  # Display username, user id, and home directory
+  echo "Username: $username"
+  echo "User ID: $uid"
+  echo "Home Directory: $homedir"
+  echo
+done < "/etc/passwd"
+
+
+
+# specific order: username password uid gid info homedir shell
+# 1. Username
+# 2. Password (usually an 'x' indicating that the password is stored in the /etc/shadow file)
+# 3. User ID (UID)
+# 4. Group ID (GID)
+# 5. User information (GECOS)
+# 6. Home directory
+# 7. Login shell
