@@ -1,3 +1,23 @@
 #!/usr/bin/env bash
 # Script that turns on an Apache Server on Docker container
+# and return a page containing Hello Holberton when querying the root of it
+
+# Apache HTTP Server Installation
+apt update
+apt install -y apache2
+
+# Apache web content server
+cd /var/www/html
+# add to index.html file to contain "Hello Holberton"
+echo "<!DOCTYPE html>" > index.html
+echo "<html>" >> index.html
+echo "<head>" >> index.html
+echo "    <title>Hello Holberton</title>" >> index.html
+echo "</head>" >> index.html
+echo "<body>" >> index.html
+echo "    <h1>Hello Holberton</h1>" >> index.html
+echo "</body>" >> index.html
+echo "</html>" >> index.html
+
+# Restart Apache service to apply changes
 sudo service apache2 start
