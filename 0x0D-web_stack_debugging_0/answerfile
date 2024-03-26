@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
-# Fix my server with these magic 2 lines
-cp /etc/passwd /tmp/
-echo OK > /tmp/isworking
+# return a page containing Hello Holberton when querying the root of it
+cd /var/www/html
+
+# Create or edit the index.html file to contain "Hello Holberton"
+echo "<!DOCTYPE html>" > index.html
+echo "<html>" >> index.html
+echo "<head>" >> index.html
+echo "    <title>Hello Holberton</title>" >> index.html
+echo "</head>" >> index.html
+echo "<body>" >> index.html
+echo "    <h1>Hello Holberton</h1>" >> index.html
+echo "</body>" >> index.html
+echo "</html>" >> index.html
