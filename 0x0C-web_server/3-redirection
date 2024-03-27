@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configures Nginx server so that /redirect_me is redirecting to another page
+
+apt-get update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo "Hello World!" > sudo /var/www/index.html
+sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me https://maphangisane.github.io/ permanent;" /etc/nginx/sites-enabled/default
+service nginx restart
