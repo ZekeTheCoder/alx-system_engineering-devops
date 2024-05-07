@@ -10,8 +10,11 @@ def number_of_subscribers(subreddit):
     """
     This function returns the number of subscribers for a given subreddit.
     """
+    if subreddit is None or type(subreddit) is not str:
+        return 0
+
     URL = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
-    header = {'User-Agent': 'ZekeTheCoder/1.0'}
+    header = {'User-Agent': 'ZekeTheCoder'}
     response = requests.get(URL, headers=header, allow_redirects=False)
     if response.status_code == 200:
         return (response.json()['data']['subscribers'])
