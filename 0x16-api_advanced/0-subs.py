@@ -8,7 +8,7 @@ import requests
 
 def number_of_subscribers(subreddit):
     """ returns the number of subscribers for a given subreddit."""
-    headers = {'User-Agent': 'zeke/1.0.0'}
+    headers = {'User-Agent': 'selBot/2.1'}
     URL = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
     response = requests.get(URL, headers=headers, allow_redirects=False)
     if response.status_code == 200:

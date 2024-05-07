@@ -8,7 +8,7 @@ import requests
 
 def top_ten(subreddit):
     """ This function prints the titles of the first 10 hot posts listed """
-    headers = {'User-Agent': 'zeke/1.0.0'}
+    headers = {'User-Agent': 'selBot/2.1'}
     URL = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     params = {'limit': 10}
     response = requests.get(URL, params=params, headers=headers,
