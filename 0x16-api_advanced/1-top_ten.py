@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 """
-This script  queries the Reddit API and
-prints the titles of the first 10 hot posts listed for a given subreddit.
+This script Contains the top_ten function.
 """
 import requests
 
 
 def top_ten(subreddit):
-    """ This function prints the titles of the first 10 hot posts listed """
-    headers = {'User-Agent': 'selBot/2.1'}
+    """
+    This function queries the Reddit API and prints the titles of
+    the first 10 hot posts listed for a given subreddit.
+    """
+    headers = {'User-Agent': 'zeke/1.0.0'}
     URL = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     params = {'limit': 10}
     response = requests.get(URL, params=params, headers=headers,
