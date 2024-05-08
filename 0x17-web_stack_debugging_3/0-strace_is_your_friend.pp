@@ -1,4 +1,4 @@
- # Using strace, find out why Apache is returning a 500 error and fix it using Puppet.
+ # Using strace, find out and fix Apache 500 error using Puppet.
 
 exec {'fix_typo':
   provider => shell,
